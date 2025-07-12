@@ -5,8 +5,8 @@ import java.sql.SQLException;
 import java.sql.SQLOutput;
 import java.sql.Statement;
 
-public class KrijoTable {
-    public static void main(String[] args){
+ class KrijoTable {
+     public static void krijoTable(){
         Connection conn=DBConnection.getConnection();
         String createTableSQL = "CREATE TABLE IF NOT EXISTS students("
                 + "id SERIAL PRIMARY KEY,"

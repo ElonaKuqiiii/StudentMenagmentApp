@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ShtoTeDhena {
-    public static void main(String[] args){
+    public static void shtoStudentin(){
         Connection conn=DBConnection.getConnection();
         String query="INSERT INTO students(emer,mbiemer,email) VALUES(?,?,?)"
                 ;

@@ -5,6 +5,9 @@ public class App {
         DBConnection db=new DBConnection();
         db.getConnection();
 
+        KrijoTable.krijoTable();
+        ShtoTeDhena.shtoStudentin();
+
 
     }
 }
