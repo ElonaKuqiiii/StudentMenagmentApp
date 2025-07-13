@@ -6,11 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.studentmenagmentapp.Controllers.StudentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmenagmentapp.Controllers.StudentController">
     <children>
         <TableView fx:id="table" layoutX="46.0" layoutY="66.0" prefHeight="230.0" prefWidth="304.0">
             <columns>
@@ -20,10 +16,11 @@
                 <TableColumn fx:id="email" prefWidth="75.0" text="EMAIL" />
             </columns>
         </TableView>
-        <Button fx:id="shto" layoutX="416.0" layoutY="66.0" mnemonicParsing="false"
-                onAction="#shtoStudent" prefHeight="32.0" prefWidth="91.0" text="SHTO" />
+        <Button fx:id="shto" layoutX="416.0" layoutY="66.0" mnemonicParsing="false" onAction="#shtoStudent" prefHeight="32.0" prefWidth="91.0" text="SHTO" />
         <TextField fx:id="emerfield" layoutX="387.0" layoutY="140.0" promptText="Emri" />
         <TextField fx:id="mbiemerfield" layoutX="388.0" layoutY="187.0" promptText="Mbiemri" />
         <TextField fx:id="emailfield" layoutX="389.0" layoutY="230.0" promptText="Email" />
+      <Button fx:id="fshije" layoutX="416.0" layoutY="269.0" mnemonicParsing="false" onAction="#fshijeStudentin" prefHeight="26.0" prefWidth="102.0" text="FSHIJE" />
+      <TextField fx:id="idfield" layoutX="399.0" layoutY="311.0" promptText="Jepni ID qe doni te fshini" />
     </children>
 </AnchorPane>
