@@ -14,9 +14,18 @@ import java.sql.Statement;
                 + "mbiemer VARCHAR(50),"
                 + "email VARCHAR(100)" + ");";
 
+        String createTable="CREATE TABLE IF NOT EXISTS subjects( "
+                +"id SERIAL PRIMARY KEY,"
+                +"lenda VARCHAR(50),"
+                +"prof VARCHAR(50),"
+                +"nota INT"
+                +");";
+
+
         try{
             Statement statement=conn.createStatement();
             statement.executeUpdate(createTableSQL);
+            statement.executeUpdate(createTable);
             System.out.println("Tabela u krijuar me sukses");
         }catch (SQLException e){
             System.out.println("Gabim gjate krijimit te tabeles:");
