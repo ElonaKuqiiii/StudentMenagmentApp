@@ -11,7 +11,7 @@ import java.net.URL;
 public class App extends Application {
     public void start(Stage primaryStage) {
         try {
-            URL fxmlUrl = getClass().getResource("/studentfxml.fxml");
+            URL fxmlUrl = getClass().getResource("/subjectsfxml.fxml");
 
             System.out.println("FXML file location: " + fxmlUrl);
 
@@ -28,5 +28,7 @@ public class App extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+
+  }
+
 }
