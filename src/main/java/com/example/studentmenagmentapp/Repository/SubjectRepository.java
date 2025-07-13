@@ -2,6 +2,7 @@ package com.example.studentmenagmentapp.Repository;
 
 import com.example.studentmenagmentapp.DBConnection;
 import com.example.studentmenagmentapp.Models.Subject;
+import com.example.studentmenagmentapp.Repository.StudentRepository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -50,5 +51,25 @@ public class SubjectRepository {
             System.out.println(e.getErrorCode());
         }
      return lendet;
+    }
+    public void fshijeLenden(String emriLendes){
+
+        try{
+            Connection conn=DBConnection.getConnection();
+            String query="DELETE FROM subjects WHERE lenda LIKE ?";
+            PreparedStatement ps=conn.prepareStatement(query);
+            ps.setString(1,"%" + emriLendes + "%");
+
+
+            ps.executeUpdate();
+
+            ps.close();
+            conn.close();
+
+
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

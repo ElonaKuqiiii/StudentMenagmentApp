@@ -18,6 +18,9 @@ public class SubjectController {
     private TableView<Subject>table;
 
     @FXML
+    private TextField lendafshifield;
+
+    @FXML
     private TextField lendafield;
     @FXML
     private TextField proffield;
@@ -36,6 +39,8 @@ public class SubjectController {
 
     @FXML
     private Button shto;
+    @FXML
+    private Button fshibutton;
 
    private SubjectService subjectService=new SubjectService();
    private ObservableList<Subject> lendet;
@@ -64,6 +69,14 @@ public class SubjectController {
        proffield.clear();
        notafield.clear();
 
+   }
+
+   @FXML
+    private void fshiLenden(){
+       String lenda=lendafshifield.getText();
+       subjectService.fshiLenden(lenda);
+       lendet.removeIf(s -> s.getLenda().equalsIgnoreCase(lenda));
+       table.refresh();
    }
 
 

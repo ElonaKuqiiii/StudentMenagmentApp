@@ -8,7 +8,7 @@ import java.util.List;
 public class SubjectService {
     private SubjectRepository subjectRepository;
     public SubjectService(){
-        SubjectRepository subjectRepository=new SubjectRepository();
+        this.subjectRepository=new SubjectRepository();
     }
 
     public void shtoLenden(String lenda,String prof,int nota){
@@ -18,5 +18,9 @@ public class SubjectService {
 
     public List<Subject> shfaq(){
        return SubjectRepository.shfaq();
+    }
+
+    public void fshiLenden(String emriLendes){
+        subjectRepository.fshijeLenden(emriLendes);
     }
 }
