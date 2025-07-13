@@ -48,4 +48,18 @@ public class StudentRepository {
         return studentet;
 
     }
+    public void fshijeStudentin(int id){
+        try{
+
+            Connection conn=DBConnection.getConnection();
+            String query="DELETE FROM students WHERE ID=?";
+            PreparedStatement stms=conn.prepareStatement(query);
+            stms.setInt(1,id);
+            stms.executeUpdate();
+
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

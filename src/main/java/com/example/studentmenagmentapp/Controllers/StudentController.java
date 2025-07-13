@@ -16,6 +16,9 @@ public class StudentController {
     private TableView<Student> table;
 
     @FXML
+    private TextField idfield;
+
+    @FXML
     private TableColumn<Student, Integer> id;
     @FXML
     private TableColumn<Student, String> emer;
@@ -70,6 +73,21 @@ public class StudentController {
         mbiemerfield.clear();
         emailfield.clear();
 
+
+    }
+
+    @FXML
+    private void fshijeStudentin(){
+        String id=idfield.getText();
+        Integer idja=Integer.parseInt(id);
+        studentService.fshijeStudentin(idja);
+        for(Student s:studentList){
+            if(idja==s.getId()){
+                studentList.remove(s);
+            }
+        }
+
+        idfield.clear();
 
     }
 }

@@ -20,4 +20,9 @@ public class StudentService {
     public List<Student> gjejTeGjitheStudentet() {
         return studentRepository.gjejTeGjithe();
     }
+
+    public void fshijeStudentin(int id){
+        studentRepository.fshijeStudentin(id);
+    }
+
 }
