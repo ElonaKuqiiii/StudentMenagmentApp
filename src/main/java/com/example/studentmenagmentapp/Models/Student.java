@@ -5,6 +5,7 @@ public class Student {
     private String emer;
     private String mbiemer;
     private String email;
+
     public Student(String emer,String mbiemer,String email){
         this.emer=emer;
         this.mbiemer=mbiemer;
@@ -27,7 +28,6 @@ public class Student {
     public void setEmer(String emer) { this.emer = emer; }
     public void setMbiemer(String mbiemer) { this.mbiemer = mbiemer; }
     public void setEmail(String email) { this.email = email; }
-
 
 
 

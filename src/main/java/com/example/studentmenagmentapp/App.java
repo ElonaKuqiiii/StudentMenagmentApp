@@ -11,7 +11,7 @@ import java.net.URL;
 public class App extends Application {
     public void start(Stage primaryStage) {
         try {
-            URL fxmlUrl = getClass().getResource("/subjectsfxml.fxml");
+            URL fxmlUrl = getClass().getResource("/userfxml.fxml");
 
             System.out.println("FXML file location: " + fxmlUrl);
 
@@ -25,6 +25,8 @@ public class App extends Application {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
+            KrijoTable.krijoTable();
+            System.out.println("tabela");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -32,3 +34,5 @@ public class App extends Application {
   }
 
 }
+
+

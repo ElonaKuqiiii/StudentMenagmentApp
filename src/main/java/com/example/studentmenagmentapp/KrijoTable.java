@@ -21,11 +21,22 @@ import java.sql.Statement;
                 +"nota INT"
                 +");";
 
+         String createTable2 = "CREATE TABLE IF NOT EXISTS users ("
+                 + "id SERIAL PRIMARY KEY,"
+                 + "username VARCHAR(50) UNIQUE NOT NULL,"
+                 + "password VARCHAR(255) NOT NULL,"
+                 + "role VARCHAR(20) NOT NULL"
+                 + ");";
 
-        try{
+
+
+
+
+         try{
             Statement statement=conn.createStatement();
-            statement.executeUpdate(createTableSQL);
-            statement.executeUpdate(createTable);
+            //statement.executeUpdate(createTableSQL);
+           // statement.executeUpdate(createTable);
+            statement.executeUpdate(createTable2);
             System.out.println("Tabela u krijuar me sukses");
         }catch (SQLException e){
             System.out.println("Gabim gjate krijimit te tabeles:");

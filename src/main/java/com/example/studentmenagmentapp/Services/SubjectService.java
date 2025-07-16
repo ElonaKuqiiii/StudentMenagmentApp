@@ -6,7 +6,9 @@ import com.example.studentmenagmentapp.Repository.SubjectRepository;
 import java.util.List;
 
 public class SubjectService {
+
     private SubjectRepository subjectRepository;
+
     public SubjectService(){
         this.subjectRepository=new SubjectRepository();
     }
