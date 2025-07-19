@@ -2,6 +2,7 @@ module com.example.studentmenagmentapp {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires jbcrypt;
 
 
     opens com.example.studentmenagmentapp to javafx.fxml;
